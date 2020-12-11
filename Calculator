@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+ <title></title>
+ <style>
+ h5 {
+ display: inline-block;
+ margin: 0 10px 0 10px;
+ width: 80px;
+ color: brown;
+}
+
+
+ body{
+ background-color: green;
+}
+input{
+display: inline-block;
+width: 80px;
+margin: 10px;
+background-color: blue;
+color: white;
+}
+button{
+background-color: Red;
+color: white;
+padding: 5px 10px 5px 10px;
+}
+h1 {
+ color: pink;
+ font-family:Ariel;
+}
+p {
+ color: yellow;
+}
+ </style>
+</head>
+<body align="center">
+<h1>Simple calculator</h1>
+<h5>Number 1</h5>
+<h5>Symbol</h5>
+<h5>Number 2</h5>
+<input id="first"type="number" placeholder="547">
+<input id="sum" placeholder="+ - × ÷">
+<input type="number" id="last"placeholder="383"><br>
+<button onclick="manoj()">calculate</button>
+
+<p id="answer"></p>
+
+ <script>
+ function manoj() {
+ var first = document
+  .getElementById("first").value;
+ var last = document
+  .getElementById("last").value;
+ var plus = document
+  .getElementById("plus");
+ var minus = document
+  .getElementById("minus")
+ var multiply = document
+  .getElementById("multiply")
+ var divide = document
+  .getElementById("divide")
+ var sum = document
+  .getElementById("sum").value
+
+ if (sum === "×") {
+  var answer = first * last +
+   " is the answer"
+
+ } else if (sum === "+") {
+  answer = parseInt(first) +
+   parseInt(last) +
+   " is the answer"
+ } else if (sum === "÷") {
+  answer = first / last +
+   " is the answer"
+ } else if (sum === "-") {
+  answer = first - last +
+   " is the answer"
+ } else if (sum !== "symbol") {
+  answer =
+   "please input correct symbol in symbol input like + - ÷ × to do correct mathematical function"
+ }
+ document.getElementById(
+  "answer").innerHTML = answer
+} 
+
+ </script>
+</body>
+</html>
